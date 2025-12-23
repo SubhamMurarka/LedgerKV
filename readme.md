@@ -428,9 +428,10 @@ If the system crashes during compaction:
 - Index is rebuilt from WALs on restart
 - No data loss occurs
 
----
 
 ### Disk Usage Behavior (Saw-Tooth Pattern)
+
+---<img width="1119" height="507" alt="Screenshot from 2025-12-17 15-48-52" src="https://github.com/user-attachments/assets/e6dde090-f0b8-4706-985a-21f181d4941d" />
 
 Because compaction rewrites only live data:
 
@@ -460,11 +461,6 @@ This saw-tooth behavior is **expected and desirable**, and is a strong indicator
 Compaction is a background process that reclaims disk space by rewriting only live records into a new WAL file and deleting obsolete data. It is triggered based on garbage ratio, runs without blocking writes or reads, and produces a characteristic saw-tooth disk usage pattern that reflects healthy system behavior.
 
 
-
-# API Documentation
-
-https://documenter.getpostman.com/view/28829311/2sAYQXoYKJ
-
 # Tech Stack
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -480,7 +476,11 @@ To run the LedgerKV app backend on your machine:
    ```bash
    git clone https://github.com/SubhamMurarka/LedgerKV.git
 
-2. Run with Docker
+2. Run with Docker:
 ```bash
  docker-compose up -d --build
+
+3. Setup TCP connection:
+```bash
+ nc localhost 7379
 
