@@ -3,6 +3,8 @@
 ### Bitcask-Inspired Key-Value Store (Go)
 A Bitcask-style persistent key–value store implemented in Go, designed to explore storage engine internals, write-ahead logging (WAL), garbage collection via compaction, and observability using Prometheus & Grafana.
 
+![INDEX (2)](https://github.com/user-attachments/assets/d38c2b25-8ac9-4a3b-86ea-030e6bd4db21)
+
 ## Server Boot-up Flow
 
 This section explains **what happens when the Bitcask server starts**, **in what order**, and **why each step exists**.  
@@ -164,9 +166,6 @@ This is acceptable for learning and correctness, but real-world systems optimize
 ### What Is a Hint File?
 
 A **hint file** is a compact, on-disk representation of the in-memory index.
-
-![connection pool (2)](https://github.com/user-attachments/assets/11df67af-4d9d-45d4-9502-1bc3e90fd673)
-
 
 ## Write Path: PUT, UPDATE, DELETE
 
@@ -470,6 +469,8 @@ https://documenter.getpostman.com/view/28829311/2sAYQXoYKJ
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
 
 # 🔧 Setup Instructions
 
