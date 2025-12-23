@@ -477,10 +477,9 @@ To run the LedgerKV app backend on your machine:
    git clone https://github.com/SubhamMurarka/LedgerKV.git
 
 2. Run with Docker:
-```bash
- docker-compose up -d --build
+   ```bash
+   docker-compose up -d --build
 
 3. Setup TCP connection:
-```bash
+  ```bash
  nc localhost 7379
-
